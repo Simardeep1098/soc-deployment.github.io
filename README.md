@@ -1,7 +1,3 @@
----
-layout: default
-title: SOC Deployment
----
 
 # SOC Deployment
 
