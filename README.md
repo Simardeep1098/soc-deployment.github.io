@@ -7,7 +7,7 @@ title: SOC Deployment
 
 ## Objective
 
-The **SOC Deployment** project aimed to create a fully functional Security Operations Center (SOC) using Microsoft Sentinel to monitor, analyze, and generate alerts for device activities. A threat intelligence feed was integrated to enhance the SIEM by bringing in commonly seen and newly found indicators of compromise (IOCs). The project was designed to improve understanding of log management, security event correlation, and threat detection strategies.
+This **SOC Deployment** project is aimed to create a fully functional Security Operations Center (SOC) using Microsoft Sentinel to monitor, analyze, and generate alerts for device activities. A threat intelligence feed was integrated to enhance the SIEM by bringing in commonly seen and newly found indicators of compromise (IOCs). The project was designed to improve understanding of log management, security event correlation, and threat detection strategies.
 
 ### Skills Learned
 - SIEM deployment, configuration, and management.
