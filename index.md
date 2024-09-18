@@ -23,7 +23,7 @@ This **SOC Deployment** project involved setting up a Security Operations Center
 
 *Ref 1: Initial SOC Setup*
 
-!(https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%201.png?raw=true)
+![](https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%201.png?raw=true)
 
 The above diagram represents the initial setup of the SOC environment using an Azure VM and Microsoft Sentinel. It includes configuring data connectors and setting up log analytics.
 
