@@ -41,13 +41,13 @@ This screenshot displays the query that filters for general successful activitie
 
 ![](https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%203.png?raw=true)
 
-The second screenshot shows the query that filters for successful activities while excluding system accounts: SecurityEvent | where Activity contains "success" and Account !contains "system". Severity: Medium. This rule refines the monitoring to focus on user accounts only, reducing noise from system accounts and highlighting potentially significant login events.
+The second screenshot shows the query that filters for successful activities while excluding system accounts: SecurityEvent where Activity contains "success" and Account !contains "system". Severity: Medium. This rule refines the monitoring to focus on user accounts only, reducing noise from system accounts and highlighting potentially significant login events.
 
 ### Sentinel Rule Query - User Accounts Excluding Specific VM
 
 ![](https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%204.png?raw=true)
 
-The third screenshot illustrates the query that filters for user account activities excluding a specific VM: SecurityEvent | where AccountType contains "user" and Account !contains "SOCVM". Severity: High. This rule is set to high severity as it targets user activities while explicitly excluding a known device used for testing, increasing the likelihood of detecting unusual or unauthorized user behavior.
+The third screenshot illustrates the query that filters for user account activities excluding a specific VM: SecurityEvent where AccountType contains "user" and Account !contains "SOCVM". Severity: High. This rule is set to high severity as it targets user activities while explicitly excluding a known device used for testing, increasing the likelihood of detecting unusual or unauthorized user behavior.
 
 ### Sentinel Overview
 
