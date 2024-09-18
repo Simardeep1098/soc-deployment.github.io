@@ -25,23 +25,35 @@ This **SOC Deployment** project involved setting up a Security Operations Center
 
 ## Steps
 
-*Ref 1: Initial SOC Setup*
+### Resource Group Overview*
 
 ![](https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%201.png?raw=true)
 
-The above diagram represents the initial setup of the SOC environment using an Azure VM and Microsoft Sentinel. It includes configuring data connectors and setting up log analytics.
+The Resource Group Overview page provides a comprehensive view of all associated resources, including the virtual machine, network security group, virtual network, and associated disks, illustrating the infrastructure setup for the SOC deployment.
 
-*Ref 2: Threat Intelligence Integration*
+### Sentinel Rule Query - General Success Activity
 
-![Threat Intelligence Screenshot](https://imgur.com/screenshot2)
+![](https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%202.png?raw=true)
 
-This screenshot shows the integration of a threat intelligence feed into the SIEM, enriching the environment with new IOCs for better detection capabilities.
+This screenshot displays the query that filters for general successful activities where Activity contains "success". Severity: Informational. This rule captures all successful login events, providing a baseline for monitoring and establishing normal activity patterns.
 
-*Ref 3: Log Analytics Workspace*
+### Sentinel Rule Query - Success Activity Excluding System Accounts
 
-![Log Analytics Screenshot](https://imgur.com/screenshot3)
+![](https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%203.png?raw=true)
 
-The above screenshot depicts the Log Analytics Workspace where Windows security events were ingested for analysis and event correlation.
+The second screenshot shows the query that filters for successful activities while excluding system accounts: SecurityEvent | where Activity contains "success" and Account !contains "system". Severity: Medium. This rule refines the monitoring to focus on user accounts only, reducing noise from system accounts and highlighting potentially significant login events.
+
+### Sentinel Rule Query - User Accounts Excluding Specific VM
+
+![](https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%204.png?raw=true)
+
+The third screenshot illustrates the query that filters for user account activities excluding a specific VM: SecurityEvent | where AccountType contains "user" and Account !contains "SOCVM". Severity: High. This rule is set to high severity as it targets user activities while explicitly excluding a known device used for testing, increasing the likelihood of detecting unusual or unauthorized user behavior.
+
+### Sentinel Overview
+
+![](https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%205.png?raw=true)
+
+The Sentinel Overview page, captured an hour after deployment, showcases the collected events, generated alerts, and logs, demonstrating the effectiveness of the SOC setup in monitoring and detecting security activities.
 
 ## Conclusion
 
