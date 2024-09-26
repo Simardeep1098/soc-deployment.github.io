@@ -25,7 +25,7 @@ This **SOC Deployment** project involved setting up a Security Operations Center
 
 ## Steps
 
-### Resource Group Overview*
+### Resource Group Overview
 
 ![](https://github.com/Simardeep1098/soc-deployment.github.io/blob/main/SOC%20Deployment/Screenshot%201.png?raw=true)
 
